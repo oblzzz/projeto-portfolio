@@ -20,6 +20,7 @@
   --destaque: #0077ff;
   --destaque-inverso: #66bbff;
   --fundo-card: #ffffff;
+  --altura-header: 65px;
 }
 
 /* @media screen and (min-width: 768px) {
@@ -28,11 +29,21 @@
   }
 } */
 
+body.escuro{
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
+}
+
 body{
   font-family: montserrat, Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5rem;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.2s, color 0.2s;
 }
 
 header{
@@ -137,6 +148,16 @@ article{
 article h2{
   color: var(--destaque);
   margin-bottom: 15px;
+}
+
+/* configuraçao para espaçamento no topo ao clicar no home em telas mobile */
+
+#ficha,
+#video,
+#skills,
+#formacao,
+#projetos {
+  scroll-margin-top: calc(var(--altura-header) + 15px);
 }
 
 .video-container{

@@ -38,3 +38,19 @@ navLinks.forEach(link => {
     }
   });
 });
+
+// correçao de botão home para mobile
+
+const botaoHome = document.querySelector('a[href="#video"]');
+botaoHome.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (window.innerWidth < 780) {
+        document.querySelector("#ficha").scrollIntoView({
+            behavior: "smooth"
+        });
+    } else {
+        document.querySelector("#video").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+});
