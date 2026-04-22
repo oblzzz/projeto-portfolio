@@ -95,7 +95,7 @@ section.ficha img.foto{
 
 .ficha h1{
   color: var(--destaque);
-  margin: 15px 0px;
+  margin:25px 0px 15px 0px;
   font-size: 1.8em;
   text-align: left;
 }
@@ -353,7 +353,25 @@ footer a{
 }
 
 
+
+
+
+
 @media screen and (min-width:780px) {
+  main{
+    grid-template-columns: auto 300px 1fr auto;
+
+  }
+
+  section#ficha{
+    grid-columns: 2 / 3;
+  }
+
+  section#detalhes{
+    grid-column: 3 / 4;
+  }
+
+
   .projeto-container .projeto{
     flex-direction: row-reverse;
     justify-content: space-between;
